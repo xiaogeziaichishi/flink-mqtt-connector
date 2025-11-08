@@ -4,7 +4,7 @@
 
 这是一个针对 Flink Streaming 的 MQTT Source/Sink 连接器，可用于在实时作业中从 MQTT 服务器读取数据或写入数据。
 
-该工程最初基于 Spark SQL Streaming MQTT Data Source（https://github.com/kevin4936/kevin-flink-connector-mqtt3）改造而来，并继续面向 Flink 生态做增强。
+该工程最初基于 Spark SQL Streaming MQTT Data Source https://github.com/kevin4936/kevin-flink-connector-mqtt3 ,改造而来，并继续面向 Flink 生态做增强。
 
 - **新增了支持table的功能，方便flink-sql的使用**
 
