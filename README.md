@@ -242,8 +242,12 @@ CREATE TABLE mqtt_array_source (
 );
 
 SELECT r.a, r.b
-FROM mqtt_array_source
-CROSS JOIN UNNEST(records) AS t(r);
+FROM mqtt_source
+         CROSS JOIN UNNEST(records) AS r;
+-- 或者
+SELECT a, b
+FROM mqtt_source
+         CROSS JOIN UNNEST(records) AS t(a, b);
 ```
 
 如需解析不同字段名（如 `c`, `d`），只需调整 `ROW` 中的列定义，无需改动代码。
@@ -268,7 +272,7 @@ SELECT
     r.metrics['temp']     AS temp,
     r.metrics['pressure'] AS pressure
 FROM mqtt_metrics
-CROSS JOIN UNNEST(records) AS t(r)
+CROSS JOIN UNNEST(records) AS r
 WHERE r.metrics['temp'] > 36;
 ```
 

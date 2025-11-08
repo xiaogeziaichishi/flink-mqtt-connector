@@ -245,8 +245,12 @@ CREATE TABLE mqtt_array_source (
 );
 
 SELECT r.a, r.b
-FROM mqtt_array_source
-CROSS JOIN UNNEST(records) AS t(r);
+FROM mqtt_source
+         CROSS JOIN UNNEST(records) AS r;
+-- or
+SELECT a, b
+FROM mqtt_source
+         CROSS JOIN UNNEST(records) AS t(a, b);
 ```
 
 To handle different field names (e.g., `c`, `d`), adjust the `ROW` definition—no code changes are required.
@@ -271,7 +275,7 @@ SELECT
     r.metrics['temp']     AS temp,
     r.metrics['pressure'] AS pressure
 FROM mqtt_metrics
-CROSS JOIN UNNEST(records) AS t(r)
+CROSS JOIN UNNEST(records) AS r
 WHERE r.metrics['temp'] > 36;
 ```
 
