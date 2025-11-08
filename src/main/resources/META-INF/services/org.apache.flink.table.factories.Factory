@@ -1,0 +1,3 @@
+com.kevin.flink.table.connector.mqtt.MQTTDynamicTableFactory
+com.kevin.flink.table.connector.mqtt.format.RawStringFormatFactory
+com.kevin.flink.table.connector.mqtt.format.ArrayJsonFormatFactory
