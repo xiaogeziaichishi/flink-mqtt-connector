@@ -6,6 +6,7 @@
 
 该工程最初基于 Spark SQL Streaming MQTT Data Source https://github.com/kevin4936/kevin-flink-connector-mqtt3 ,改造而来，并继续面向 Flink 生态做增强。
 
+- **更新到flink版本为1.15.4，mqtt是v3（本地部署EMQX版本5.6.1）**
 - **新增了支持table的功能，方便flink-sql的使用**
 
 - **实际用例可参考[此处](http://n150nas.bingxiangtie.top:8002/flink-mqtt/)(不过需要IPv6的IP才能访问)**

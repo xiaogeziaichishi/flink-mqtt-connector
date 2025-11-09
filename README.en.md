@@ -4,6 +4,7 @@
 
 This project provides MQTT source and sink connectors for Flink Streaming so that real-time jobs can read data from or write data to MQTT brokers. The implementation was adapted from the Spark SQL Streaming MQTT data source (https://github.com/kevin4936/kevin-flink-connector-mqtt3) and has been enhanced for the Flink ecosystem.
 
+- **Updated Flink to version 1.15.4, and MQTT to version 3 (locally deployed EMQX version 5.6.1)**
 - **Table-format support has been added to make Flink SQL usage straightforward.**
 - **A production-style showcase is available at [this link](http://n150nas.bingxiangtie.top:8002/flink-mqtt/) (requires IPv6 access).**
 
